@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Index</h1>
+    <div class="containerParent">
+        <div class="container">
+            {{#users}}
+            <div class="info">
+                <img class="avatar" src="{{avatar}}"></img>
+                <p class="indexName">{{name}}</p>{{#job}}
+                <p class="indexJobCompany">{{job}}, {{company}}</p>{{/job}} {{^job}}
+                <p style="color: #c87a74">Available for hire</p>
+                {{/job}}
+            </div>
+            {{/users}}
+        </div>
+    </div>
+    <h1>Individual Bios</h1>
+    <div class="individualContainerParent">{{#users}}
+        <ul class="individualContainer">
+            <img class="image" src="{{avatar}}"></img>
+            <p class="name">{{name}}</p>
+
+            {{#address.city}}
+            <p class="city">{{address.city}}, {{address.country}} | {{#job}}{{job}}, {{company}}{{/job}}{{^job}} Available for hire{{/job}}</p>
+            {{/address.city}}{{^address.city}}
+            <p class="no-city">{{address.country}} | {{#job}}{{job}}, {{company}}{{/job}}{{^job}} Available for hire{{/job}}</p>{{/address.city}}
+
+
+
+            <p class="email">{{email}} | {{phone}}</p>
+
+
+            {{#university}}
+            <p class="university">Education {{university}}</p>{{/university}} {{^university}}{{/university}}
+
+
+
+
+            <p class="skills">Skills {{skills}}</p>
+        </ul>
+        {{/users}}
+
+    </div>
+
+
+</body>
+
+</html>
