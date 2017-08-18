@@ -22,6 +22,13 @@ app.get("/", function (req, res) {
 
 });
 
+app.get("/:id", (req, res) => {
+    let userId = req.params.id;
+    let user = data.users.find(user => user.id === parseInt(userId));
+    res.render("profiles", user);
+
+});
+
 
 //Listen to port
 app.listen(port, () => {

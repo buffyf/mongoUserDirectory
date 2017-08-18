@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background: lightgray;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .containerParent {
@@ -14,14 +14,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 0 220px;
-    background-color: white;
-}
-
-.individualContainer {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; */
     margin: 0 220px;
     background-color: white;
 }
@@ -47,16 +39,47 @@ body {
     padding: 3px;
 }
 
-li {
-    list-style-type: none;
+.individualContainer {
+    margin: 0 220px;
+    background-color: white;
+    padding: 1px;
+}
+
+.indContain {
+    width: 775px;
+    text-align: left;
 }
 
 .image {
     border: 1px solid lightgray;
     border-radius: 50%;
     float: left;
+    margin: 24px;
+    width: 150px;
 }
 
 .name {
     font-size: 3rem;
+    margin-bottom: 1px;
+    margin-right: 100px;
+    margin-top: 21px;
+}
+
+.city .no-city {
+    margin-right: 100px;
+}
+
+.email {
+    margin-right: 120px;
+    margin-bottom: 67px;
+    margin-top: -8px;
+}
+
+.university {
+    margin-left: 100px;
+}
+
+.skills {
+    margin-left: 134px;
+    margin-bottom: 70px;
 }
