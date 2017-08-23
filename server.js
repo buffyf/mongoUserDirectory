@@ -10,7 +10,7 @@ const dbUrl = "mongodb://localhost:27017/mongoRobots";
 const ObjectId = mongo.ObjectID
 
 const app = express();
-// let data = require("./data");
+let data = require("./data");
 
 let DB;
 let Robots;
@@ -62,7 +62,7 @@ app.get("/", (req, res) => {
     });
 });
 
-app.get("/:_id", (req, res) => {
+app.get("/profile/:_id", (req, res) => {
     Robots.findOne({ _id: ObjectId(req.params._id) }, function (err, foundRobot) {
         if (err) {
             return res.status(500).send(err);
