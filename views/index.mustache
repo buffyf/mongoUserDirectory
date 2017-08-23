@@ -10,13 +10,18 @@
 </head>
 
 <body>
+    <nav>
+        <a class="navLink" href="/">Home</a>
+        <a class="navLink" href="/employed">Currently Employed</a>
+        <a class="navLink" href="/unemployed">Available for Hire</a>
+    </nav>
     <h1>Index</h1>
     <div class="containerParent">
         <div class="container">
             {{#users}}
             <div class="info">
                 <img class="avatar" src="{{avatar}}"></img>
-                <p><a href="/{{id}}" class="indexName">{{name}}</a></p>{{#job}}
+                <p><a href="/{{_id}}" class="indexName">{{name}}</a></p>{{#job}}
                 <p class="indexJobCompany">{{job}}, {{company}}</p>{{/job}} {{^job}}
                 <p style="color: #c87a74">Available for hire</p>
                 {{/job}}
